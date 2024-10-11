@@ -1,0 +1,23 @@
+where sigla_depto in( select sigla_depto from departamento
+where sigla_depto in ('mkt', 'hr'));
+where sigla_depto = mkt and sigla_depto = 'hr';
+
+--  Exercício 3;
+
+select nome_depto, (select sum(salario) as Total_Salario
+from funcionario where departamento.sigla_depto = sigla_depto)
+from departamento;
+
+-- Exercício 4;
+
+select nome_funcionario from funcionario
+where sigla_depto in( select sigla_depto from departamento
+where sigla_depto AVG 
+
+
+--Não consegui fazer mais
+
+            
+select * from funcionario;
+select * from departamento;
+select * from projeto;
